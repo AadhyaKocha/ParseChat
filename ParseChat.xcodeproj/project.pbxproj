@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ECF086E22D661F200F5A8AA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECF086D22D661F200F5A8AA /* LoginViewController.m */; };
+		0ECF087122D6635800F5A8AA /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECF087022D6635800F5A8AA /* SignUpViewController.m */; };
 		0EDEB3BA22D65B2F0054F172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEB3B922D65B2F0054F172 /* AppDelegate.m */; };
 		0EDEB3BD22D65B2F0054F172 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEB3BC22D65B2F0054F172 /* ViewController.m */; };
 		0EDEB3C022D65B2F0054F172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDEB3BE22D65B2F0054F172 /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		00B1E09AF97EA42C3114DB69 /* Pods_ParseChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ECF086C22D661F200F5A8AA /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0ECF086D22D661F200F5A8AA /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0ECF086F22D6635800F5A8AA /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		0ECF087022D6635800F5A8AA /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		0EDEB3B522D65B2F0054F172 /* ParseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDEB3B822D65B2F0054F172 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EDEB3B922D65B2F0054F172 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,10 +124,9 @@
 		0EDEB3B722D65B2F0054F172 /* ParseChat */ = {
 			isa = PBXGroup;
 			children = (
+				0EDEB3EA22D660120054F172 /* View Controllers */,
 				0EDEB3B822D65B2F0054F172 /* AppDelegate.h */,
 				0EDEB3B922D65B2F0054F172 /* AppDelegate.m */,
-				0EDEB3BB22D65B2F0054F172 /* ViewController.h */,
-				0EDEB3BC22D65B2F0054F172 /* ViewController.m */,
 				0EDEB3BE22D65B2F0054F172 /* Main.storyboard */,
 				0EDEB3C122D65B2F0054F172 /* Assets.xcassets */,
 				0EDEB3C322D65B2F0054F172 /* LaunchScreen.storyboard */,
@@ -149,6 +154,19 @@
 			path = ParseChatUITests;
 			sourceTree = "<group>";
 		};
+		0EDEB3EA22D660120054F172 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0EDEB3BB22D65B2F0054F172 /* ViewController.h */,
+				0EDEB3BC22D65B2F0054F172 /* ViewController.m */,
+				0ECF086C22D661F200F5A8AA /* LoginViewController.h */,
+				0ECF086D22D661F200F5A8AA /* LoginViewController.m */,
+				0ECF086F22D6635800F5A8AA /* SignUpViewController.h */,
+				0ECF087022D6635800F5A8AA /* SignUpViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		899D8EC2F4C9289F3C6A6B1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +187,6 @@
 				9177E86BF03AA02805323140 /* Pods-ParseChatUITests.debug.xcconfig */,
 				A9BEBCBD61B210ACC195024A /* Pods-ParseChatUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -184,6 +201,7 @@
 				0EDEB3B122D65B2F0054F172 /* Sources */,
 				0EDEB3B222D65B2F0054F172 /* Frameworks */,
 				0EDEB3B322D65B2F0054F172 /* Resources */,
+				C45B1497F517D8C7A5BE3EEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,7 +220,6 @@
 				0EDEB3C922D65B2F0054F172 /* Sources */,
 				0EDEB3CA22D65B2F0054F172 /* Frameworks */,
 				0EDEB3CB22D65B2F0054F172 /* Resources */,
-				6C99501104B37FD030477802 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -369,21 +386,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6C99501104B37FD030477802 /* [CP] Embed Pods Frameworks */ = {
+		C45B1497F517D8C7A5BE3EEA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ParseChatTests/Pods-ParseChatTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ParseChat/Pods-ParseChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ParseChatTests/Pods-ParseChatTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ParseChat/Pods-ParseChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ParseChatTests/Pods-ParseChatTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ParseChat/Pods-ParseChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -393,6 +410,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECF086E22D661F200F5A8AA /* LoginViewController.m in Sources */,
+				0ECF087122D6635800F5A8AA /* SignUpViewController.m in Sources */,
 				0EDEB3BD22D65B2F0054F172 /* ViewController.m in Sources */,
 				0EDEB3C822D65B2F0054F172 /* main.m in Sources */,
 				0EDEB3BA22D65B2F0054F172 /* AppDelegate.m in Sources */,

@@ -6,11 +6,11 @@ target 'ParseChat' do
   use_frameworks!
 
   # Pods for ParseChat
+    pod 'Parse'
 
   target 'ParseChatTests' do
     inherit! :search_paths
     # Pods for testing
-	pod 'Parse'
   end
 
   target 'ParseChatUITests' do
