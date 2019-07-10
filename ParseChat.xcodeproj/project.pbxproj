@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0ECF086E22D661F200F5A8AA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECF086D22D661F200F5A8AA /* LoginViewController.m */; };
 		0ECF087122D6635800F5A8AA /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECF087022D6635800F5A8AA /* SignUpViewController.m */; };
+		0ECF087422D6693600F5A8AA /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECF087322D6693600F5A8AA /* ChatViewController.m */; };
 		0EDEB3BA22D65B2F0054F172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEB3B922D65B2F0054F172 /* AppDelegate.m */; };
-		0EDEB3BD22D65B2F0054F172 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEB3BC22D65B2F0054F172 /* ViewController.m */; };
 		0EDEB3C022D65B2F0054F172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDEB3BE22D65B2F0054F172 /* Main.storyboard */; };
 		0EDEB3C222D65B2F0054F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EDEB3C122D65B2F0054F172 /* Assets.xcassets */; };
 		0EDEB3C522D65B2F0054F172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDEB3C322D65B2F0054F172 /* LaunchScreen.storyboard */; };
@@ -45,11 +45,11 @@
 		0ECF086D22D661F200F5A8AA /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0ECF086F22D6635800F5A8AA /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		0ECF087022D6635800F5A8AA /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		0ECF087222D6693600F5A8AA /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		0ECF087322D6693600F5A8AA /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		0EDEB3B522D65B2F0054F172 /* ParseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDEB3B822D65B2F0054F172 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EDEB3B922D65B2F0054F172 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0EDEB3BB22D65B2F0054F172 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0EDEB3BC22D65B2F0054F172 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0EDEB3BF22D65B2F0054F172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EDEB3C122D65B2F0054F172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EDEB3C422D65B2F0054F172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,12 +157,12 @@
 		0EDEB3EA22D660120054F172 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0EDEB3BB22D65B2F0054F172 /* ViewController.h */,
-				0EDEB3BC22D65B2F0054F172 /* ViewController.m */,
 				0ECF086C22D661F200F5A8AA /* LoginViewController.h */,
 				0ECF086D22D661F200F5A8AA /* LoginViewController.m */,
 				0ECF086F22D6635800F5A8AA /* SignUpViewController.h */,
 				0ECF087022D6635800F5A8AA /* SignUpViewController.m */,
+				0ECF087222D6693600F5A8AA /* ChatViewController.h */,
+				0ECF087322D6693600F5A8AA /* ChatViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -412,7 +412,7 @@
 			files = (
 				0ECF086E22D661F200F5A8AA /* LoginViewController.m in Sources */,
 				0ECF087122D6635800F5A8AA /* SignUpViewController.m in Sources */,
-				0EDEB3BD22D65B2F0054F172 /* ViewController.m in Sources */,
+				0ECF087422D6693600F5A8AA /* ChatViewController.m in Sources */,
 				0EDEB3C822D65B2F0054F172 /* main.m in Sources */,
 				0EDEB3BA22D65B2F0054F172 /* AppDelegate.m in Sources */,
 			);

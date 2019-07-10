@@ -136,21 +136,41 @@
             </objects>
             <point key="canvasLocation" x="424.80000000000001" y="124.58770614692655"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat-->
         <scene sceneID="VVq-Xf-Nfk">
             <objects>
-                <viewController id="PTm-I1-FbQ" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Chat" id="PTm-I1-FbQ" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="72I-oo-gd9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-jX-ddv">
+                                <rect key="frame" x="16" y="78" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztx-VD-7Ku">
+                                <rect key="frame" x="319" y="78" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="send"/>
+                                <connections>
+                                    <action selector="didTapSend:" destination="PTm-I1-FbQ" eventType="touchUpInside" id="BFq-ey-0na"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="maw-35-ZXM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jhY-XG-BiG"/>
+                    <navigationItem key="navigationItem" title="Chat" id="jhY-XG-BiG"/>
+                    <connections>
+                        <outlet property="chatMessageField" destination="aC2-jX-ddv" id="bTU-ds-nJu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJl-Id-OFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="1037"/>
+            <point key="canvasLocation" x="1016.8" y="1036.7316341829087"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KRI-pI-5WY">
